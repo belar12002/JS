@@ -2,6 +2,20 @@
     <head>
         <title>Aulas de Javascript</title>
         <script>
+            var produto = new Object();
+
+            produto.nome = "Caneta";
+            produto.preco = 1.50;
+            produto.cor = "preto";
+            produto.marca = "bic";
+  
+            function retornarInfo() {
+                return "Meu produto " + this.nome + " custa: " + this.preco;
+            }
+
+            produto.info = retornarInfo;
+
+            alert (produto.info());
 
         </script>
     </head>
